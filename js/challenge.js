@@ -21,14 +21,18 @@ document.addEventListener("DOMContentLoaded", () => {
             pause.innerText = "pause"
             interval = setInterval(incrementCounter, 1000)
         } else{
-            clearInterval(interval)
             pause.innerText = "resume"
+            clearInterval(interval)
+           
         }
-        minus.disable = true
-        plus.disable = true
-        heart.disable = true 
-        submit.disable = true
-        pause.innerText = "resume"
+        minus.disabled = !minus.disabled
+        plus.disabled = !plus.disabled
+        heart.disabled = !heart.disabled
+        submit.disabled = !submit.disabled
+    })
+    let commentForm = document.getElementById("comment-form")
+    commentForm.addEventListener("submit", (e) => {
+        
     })
 })
 
